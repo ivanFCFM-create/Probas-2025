@@ -1,6 +1,5 @@
 
 
-#Generar una lista de impares y pares hasta un límite dado 
 
 Lím=int(input('Introduzca un límite:'))
 Par=[]
