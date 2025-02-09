@@ -1,23 +1,24 @@
 
 #Ciclos
 #if anidado
-num1=5
-num2= 3
-cond=bool (0)
+#num1=5
+#num2= 3
+#cond=bool (0)
 #todos los numeros te dan verdadero menos el 0 y el none
-condicion= num1>num2
+#condicion= num1>num2
 
-if condicion:
-    print(condicion)
-else:
-    print('Flaseo')
+#if condicion:
+   # print(condicion)
+#else:
+ #   print('Flaseo')
 
-edad=19
+edad=int(input('Introduzca tu edad'))
 if edad<18:
     print('Eres menor')
 elif edad>=18 and edad<=60:
     print('eres adulto')
-elif
+else:
+    print('Ya no puedes jugar roblox')
 
 
 
