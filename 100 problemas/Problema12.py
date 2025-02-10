@@ -1,3 +1,7 @@
+
+
+
+
 A=int(input('Introduzca un número:'))
 B=int(input('Introduzca el segundo número:'))
 C=int(input('Introduzca el tercer número:'))
