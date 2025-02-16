@@ -1,49 +1,38 @@
-
-
 import random
-#Busqueda lineal
-lim=int(input('introduzca el limite:'))
-list= [random.randint(1,lim) for num in range(1,lim+1) ]
+límite=int(input('Introduzca un límite'))
+list=[random.randint(1,100) for _ in range(límite)]
 print(list)
-NumeroEnc=int(input('Introduzca el numero a buscar:'))
+cont=0
 encontrado=False
-for num in list:
-    if NumeroEnc==num:
+Númeroaencontrar=int(input('Introduzca un número:'))
+for itm in list:
+    if itm==Númeroaencontrar:
         encontrado=True
-if not encontrado==True:
-    print('El numero no pertenece a la lista')
-else :
-    print('El numero pertenece a la lista:')
+        cont=list.index(itm)
+        cont2=cont+1
+        print('El numero pertenece a la lista en la posicion:', cont2)
 
-#Busqueda Binaria
-ordenada=sorted(list)
-Lista2=[set(ordenada)]
+list.sort()
+print(f'Lista ordenada: {list}')
 
+Númeroaencontrar = int(input('Introduzca un número: '))
 
-ordenada = sorted(list)
+def busqueda_binaria(ilst, val):
+    bajo, alto = 0, len(list) - 1
+    while bajo <= alto:
+        medio = (bajo + alto) // 2
+        if list[medio] == val:
+            return medio
+        elif list[medio] < val:
+            bajo = medio + 1
+        else:
+            alto = medio - 1
+    return -1
 
-print("Lista ordenada:", ordenada)
+posicion = busqueda_binaria(list, Númeroaencontrar)
 
-
-def busqueda_binaria(ordenada, numero_enc):
-    menor = 0  
-    mayor = len(ordenada) - 1  
-
-    while menor <= mayor:
-        medio = (menor + mayor) // 2
-        if ordenada[medio] == numero_enc:  
-            return medio  
-        elif ordenada[medio] < numero_enc:  
-            menor = medio + 1
-        else:  
-            mayor = medio - 1
-    
-    return -1  
-
-numero_enc = int(input("Introduce el número a buscar: "))
-resultado = busqueda_binaria(ordenada, NumeroEnc)
-
-if resultado != -1:
-    print("El número  está en la lista.")
+if posicion != -1:
+    print(f'El número {Númeroaencontrar} se encuentra en la posición {posicion + 1}.')
 else:
-    print("El número  no está en la lista.")
+    print(f'El número {Númeroaencontrar} no se encuentra en la lista.')
+   

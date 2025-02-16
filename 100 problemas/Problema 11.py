@@ -1,10 +1,11 @@
 
 
 
-Palabra=str(input('Introduzca una palabra:'))
-inversa= ''.join(reversed(Palabra))
-estructurada= inversa.replace()
-if Palabra==estructurada:
-   print('La palabra es un palíndromo')
+Cadena= input("Introduce una cadena: ")
+
+Cadena = Cadena.replace(" ", "").lower()
+if Cadena == Cadena[::-1]:
+    print("Es un palíndromo")
 else:
-  print('No es un palíndormo')
+    print("No es un palíndromo")
+
